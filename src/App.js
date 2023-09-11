@@ -2,16 +2,29 @@ import {Route,Routes} from 'react-router-dom'
 import { Home } from './components/Home';
 import { About } from './components/About'
 import { Navbar } from './components/Navbar';
-import cakeContianer from './components/cakeContianer';
+import OrderSummary from './components/OrderSummary';
+import NoMatch from './components/NoMatch';
+import Products from './components/Products';
+import FeturedProducts from './components/FeturedProducts';
+import NewProducts from './components/NewProducts';
 
 function App() {
   return (
-    {/*<><Navbar />
+  <>
+  <Navbar />
    <Routes>
     <Route path='/' element={<Home />}></Route>
     <Route path='about' element={<About />}></Route>
+    <Route path='order-summary' element={<OrderSummary />}/>
+    <Route path='*' element={<NoMatch/>}/>
+    <Route path='products'element={<Products />}>
+      <Route index element={<FeturedProducts/> } />
+
+      <Route path='featured' element={<FeturedProducts />} />
+      <Route path='new' element={<NewProducts />}/>
+      </Route>
    </Routes>
-  </>*/}
+  </>
   
   )
 }

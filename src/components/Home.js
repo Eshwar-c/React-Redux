@@ -1,3 +1,11 @@
+import { useNavigate } from "react-router-dom"
 export const Home=()=>{
-  return <div>Home Page</div>
+  const navigate=useNavigate()
+  return (
+    <>
+    <div>home page</div>
+    <button onClick={()=>navigate('order-summary')}>place order</button>
+  </>
+  )
+  
 }
